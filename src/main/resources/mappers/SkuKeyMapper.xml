@@ -30,5 +30,9 @@
         ,isSKU=#{isSKU},updateDate=SYSDATE() where id=#{id}
     </update>
 
+    <update id="delSkuKey" parameterType="java.lang.Integer">
+        update t_skukey set isDel=1,updateDate=SYSDATE() where  id=#{id}
+    </update>
+
 
 </mapper>

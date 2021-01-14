@@ -11,4 +11,6 @@ public interface SkuKeyService {
     void addSkuKey(SkuKeyBean keyBean);
 
     void updateSkuKey(SkuKeyBean keyBean);
+
+    void delSkuKey(Integer id);
 }

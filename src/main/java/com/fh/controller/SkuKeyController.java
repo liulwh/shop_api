@@ -6,10 +6,7 @@ import com.fh.bean.vo.SkuKVo;
 import com.fh.common.ReturnData;
 import com.fh.service.SkuKeyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -42,6 +39,12 @@ public class SkuKeyController {
     @PostMapping("/updateSkuKey")
     public ReturnData updateSkuKey(SkuKeyBean keyBean){
         skuKeyService.updateSkuKey(keyBean);
+        return  ReturnData.successs(null);
+    }
+
+    @DeleteMapping("/delSkuKey")
+    public ReturnData delSkuKey(Integer id){
+        skuKeyService.delSkuKey(id);
         return  ReturnData.successs(null);
     }
 

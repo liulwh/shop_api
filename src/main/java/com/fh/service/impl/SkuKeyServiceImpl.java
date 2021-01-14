@@ -40,4 +40,9 @@ public class SkuKeyServiceImpl implements SkuKeyService {
     public void updateSkuKey(SkuKeyBean keyBean) {
         skuKeyMapper.updateSkuKey(keyBean);
     }
+
+    @Override
+    public void delSkuKey(Integer id) {
+        skuKeyMapper.delSkuKey(id);
+    }
 }
