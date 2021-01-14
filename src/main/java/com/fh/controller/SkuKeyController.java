@@ -1,11 +1,13 @@
 package com.fh.controller;
 
 
+import com.fh.bean.po.SkuKeyBean;
 import com.fh.bean.vo.SkuKVo;
 import com.fh.common.ReturnData;
 import com.fh.service.SkuKeyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,6 +29,12 @@ public class SkuKeyController {
       Map map= skuKeyService.querySkuKeyData(skuKVo);
 
         return  ReturnData.successs(map);
+    }
+
+    @PostMapping("/addSkuKey")
+    public ReturnData addSkuKey(SkuKeyBean keyBean){
+       skuKeyService.addSkuKey(keyBean);
+        return  ReturnData.successs(null);
     }
 
 

@@ -18,7 +18,7 @@ public class SkuKeyBean {
 
     private Integer isDel; // 0显示 1不显示
 
-    private Date  creataDate;
+    private Date  createDate;
 
     private Date  updateDate;
 
@@ -81,12 +81,12 @@ public class SkuKeyBean {
         this.isDel = isDel;
     }
 
-    public Date getCreataDate() {
-        return creataDate;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setCreataDate(Date creataDate) {
-        this.creataDate = creataDate;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
     public Date getUpdateDate() {

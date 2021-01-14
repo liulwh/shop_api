@@ -17,4 +17,11 @@
           limit  ${size*(start-1)},#{size}
     </select>
 
+    <insert id="addSkuKey" parameterType="com.fh.bean.po.SkuKeyBean">
+
+        insert into t_skukey (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author)
+        value
+        (#{name},#{nameCH},#{typeId},#{type},#{isSKU},0,SYSDATE(),SYSDATE(),'lwh')
+    </insert>
+
 </mapper>

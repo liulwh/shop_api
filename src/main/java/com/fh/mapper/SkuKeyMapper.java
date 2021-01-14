@@ -12,4 +12,6 @@ public interface SkuKeyMapper {
     Integer queryCount(SkuKVo skuKVo);
 
     List<SkuKeyBean> queryList(SkuKVo skuKVo);
+
+    void addSkuKey(SkuKeyBean keyBean);
 }
