@@ -22,7 +22,10 @@ public class SkuKeyController {
 
     @GetMapping("/querySkuKeyData")
     public ReturnData querySkuKeyData(SkuKVo skuKVo){
+
+
       Map map= skuKeyService.querySkuKeyData(skuKVo);
+
         return  ReturnData.successs(map);
     }
 
