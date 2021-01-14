@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.mapper.SkuKeyMapper">
+
+    <select id="queryCount" parameterType="com.fh.bean.vo.SkuKVo" resultType="java.lang.Integer">
+
+        select count(id) from t_skukey where isDel=0
+
+    </select>
+
+    <select id="queryList" parameterType="com.fh.bean.vo.SkuKVo" resultType="com.fh.bean.po.SkuKeyBean">
+
+        select * from t_skukey where  isDel=0
+          limit  ${size*(start-1)},#{size}
+    </select>
+
+</mapper>
