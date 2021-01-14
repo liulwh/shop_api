@@ -39,4 +39,12 @@ public class SkuKeyController {
 
 
 
+    @PostMapping("/updateSkuKey")
+    public ReturnData updateSkuKey(SkuKeyBean keyBean){
+        skuKeyService.updateSkuKey(keyBean);
+        return  ReturnData.successs(null);
+    }
+
+
+
 }

@@ -24,4 +24,11 @@
         (#{name},#{nameCH},#{typeId},#{type},#{isSKU},0,SYSDATE(),SYSDATE(),'lwh')
     </insert>
 
+    <update id="updateSkuKey" parameterType="com.fh.bean.po.SkuKeyBean">
+
+        update t_skukey set name=#{name},nameCH=#{nameCH},typeId=#{typeId},type=#{type}
+        ,isSKU=#{isSKU},updateDate=SYSDATE() where id=#{id}
+    </update>
+
+
 </mapper>

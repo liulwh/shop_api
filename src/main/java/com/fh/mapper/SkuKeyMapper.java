@@ -14,4 +14,6 @@ public interface SkuKeyMapper {
     List<SkuKeyBean> queryList(SkuKVo skuKVo);
 
     void addSkuKey(SkuKeyBean keyBean);
+
+    void updateSkuKey(SkuKeyBean keyBean);
 }

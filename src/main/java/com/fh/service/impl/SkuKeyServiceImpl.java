@@ -35,4 +35,9 @@ public class SkuKeyServiceImpl implements SkuKeyService {
     public void addSkuKey(SkuKeyBean keyBean) {
         skuKeyMapper.addSkuKey(keyBean);
     }
+
+    @Override
+    public void updateSkuKey(SkuKeyBean keyBean) {
+        skuKeyMapper.updateSkuKey(keyBean);
+    }
 }

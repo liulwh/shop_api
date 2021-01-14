@@ -9,4 +9,6 @@ public interface SkuKeyService {
     Map querySkuKeyData(SkuKVo skuKVo);
 
     void addSkuKey(SkuKeyBean keyBean);
+
+    void updateSkuKey(SkuKeyBean keyBean);
 }
