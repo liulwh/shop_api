@@ -1,6 +1,7 @@
 package com.fh.service.impl;
 
 import com.fh.bean.po.SkuKeyBean;
+import com.fh.bean.vo.SkuKShow;
 import com.fh.bean.vo.SkuKVo;
 import com.fh.mapper.SkuKeyMapper;
 import com.fh.service.SkuKeyService;
@@ -25,8 +26,8 @@ public class SkuKeyServiceImpl implements SkuKeyService {
       Integer count= skuKeyMapper.queryCount(skuKVo);
         map.put("count",count);
 
-       List<SkuKeyBean> skuKeyBeans= skuKeyMapper.queryList(skuKVo);
-        map.put("list",skuKeyBeans);
+       List<SkuKShow> skuKShows= skuKeyMapper.queryListShow(skuKVo);
+        map.put("list",skuKShows);
 
         return map;
     }
