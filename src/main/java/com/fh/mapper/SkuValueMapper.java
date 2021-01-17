@@ -10,4 +10,6 @@ public interface SkuValueMapper {
     List<SkuValueBean> queryData(Integer skuId);
 
     void addSkuValue(SkuValueBean skuValueBean);
+
+    SkuValueBean querySkuValueById(Integer id);
 }

@@ -18,4 +18,8 @@
         (#{name},#{nameCH},#{skuKeyId},0)
     </insert>
 
+    <select id="querySkuValueById" parameterType="java.lang.Integer" resultType="com.fh.bean.po.SkuValueBean">
+        select  * from  t_skuvalue where id=#{id}
+    </select>
+
 </mapper>

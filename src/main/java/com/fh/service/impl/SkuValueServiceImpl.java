@@ -30,4 +30,10 @@ public class SkuValueServiceImpl implements SkuValueService {
     public void addSkuValue(SkuValueBean skuValueBean) {
         skuValueMapper.addSkuValue(skuValueBean);
     }
+
+    @Override
+    public SkuValueBean querySkuValueById(Integer id) {
+
+        return skuValueMapper.querySkuValueById(id);
+    }
 }

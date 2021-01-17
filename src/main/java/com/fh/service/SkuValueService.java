@@ -8,4 +8,6 @@ public interface SkuValueService {
     Map queryData(Integer skuId);
 
     void addSkuValue(SkuValueBean skuValueBean);
+
+    SkuValueBean querySkuValueById(Integer id);
 }

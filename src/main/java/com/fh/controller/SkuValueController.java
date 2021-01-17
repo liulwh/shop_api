@@ -30,6 +30,10 @@ public class SkuValueController {
         return  ReturnData.successs("");
     }
 
-
+    @GetMapping("/querySkuValueById")
+    public ReturnData querySkuValueById(Integer id){
+      SkuValueBean skuValueBean= skuValueService.querySkuValueById(id);
+        return  ReturnData.successs(skuValueBean);
+    }
 
 }
