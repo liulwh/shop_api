@@ -11,5 +11,11 @@
          where skv.isDel=0
      </select>
 
+    <insert id="addSkuValue" parameterType="com.fh.bean.po.SkuValueBean">
+
+        insert into  t_skuvalue (name,nameCH,skuKeyId,isDel)
+        value
+        (#{name},#{nameCH},#{skuKeyId},0)
+    </insert>
 
 </mapper>

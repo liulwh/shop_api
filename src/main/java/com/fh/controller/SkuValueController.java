@@ -4,10 +4,7 @@ import com.fh.bean.po.SkuValueBean;
 import com.fh.common.ReturnData;
 import com.fh.service.SkuValueService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -25,6 +22,12 @@ public class SkuValueController {
     public ReturnData  queryData(Integer skuId){
         Map map=skuValueService.queryData(skuId);
         return  ReturnData.successs(map);
+    }
+
+    @PostMapping("/addSkuValue")
+    public ReturnData addSkuValue(SkuValueBean skuValueBean){
+        skuValueService.addSkuValue(skuValueBean);
+        return  ReturnData.successs("");
     }
 
 

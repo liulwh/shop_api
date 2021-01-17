@@ -25,4 +25,9 @@ public class SkuValueServiceImpl implements SkuValueService {
         map.put("list",skuValueBeans);
         return map;
     }
+
+    @Override
+    public void addSkuValue(SkuValueBean skuValueBean) {
+        skuValueMapper.addSkuValue(skuValueBean);
+    }
 }
