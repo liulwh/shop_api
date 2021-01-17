@@ -10,7 +10,7 @@ public class SkuKeyBean {
 
     private String nameCH;//中文名字   如  颜色
 
-    private Integer typeId;// 品牌 id
+    private Integer typeId;// 类型id
 
     private Integer type; // 属性的类型    0 下拉框     1 单选框      2  复选框   3  输入框
 

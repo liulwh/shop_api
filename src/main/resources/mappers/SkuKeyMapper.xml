@@ -15,7 +15,7 @@
 
     <select id="queryListShow" parameterType="com.fh.bean.vo.SkuKVo" resultType="com.fh.bean.vo.SkuKShow">
 
- SELECT  sku.id,sku.`name`,sku.nameCH,ty.`name` as typeName ,sku.isSku,sku.type FROM
+ SELECT  sku.id,sku.`name`,sku.nameCH,sku.typeId,ty.`name` as typeName ,sku.isSku,sku.type FROM
  t_skukey sku LEFT JOIN t_type ty on sku.typeId=ty.id  where  sku.isdel=0
   limit  ${size*(start-1)},#{size}
     </select>
