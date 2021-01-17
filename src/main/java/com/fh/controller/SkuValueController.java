@@ -36,4 +36,10 @@ public class SkuValueController {
         return  ReturnData.successs(skuValueBean);
     }
 
+    @PostMapping("/updateSkuValue")
+    public ReturnData updateSkuValue(SkuValueBean skuValueBean){
+        skuValueService.updateSkuValue(skuValueBean);
+        return  ReturnData.successs("");
+    }
+
 }

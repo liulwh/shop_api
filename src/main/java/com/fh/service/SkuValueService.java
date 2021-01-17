@@ -10,4 +10,6 @@ public interface SkuValueService {
     void addSkuValue(SkuValueBean skuValueBean);
 
     SkuValueBean querySkuValueById(Integer id);
+
+    void updateSkuValue(SkuValueBean skuValueBean);
 }

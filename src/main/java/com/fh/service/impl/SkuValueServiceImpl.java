@@ -36,4 +36,9 @@ public class SkuValueServiceImpl implements SkuValueService {
 
         return skuValueMapper.querySkuValueById(id);
     }
+
+    @Override
+    public void updateSkuValue(SkuValueBean skuValueBean) {
+        skuValueMapper.updateSkuValue(skuValueBean);
+    }
 }

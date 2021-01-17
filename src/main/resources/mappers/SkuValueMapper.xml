@@ -22,4 +22,9 @@
         select  * from  t_skuvalue where id=#{id}
     </select>
 
+    <update id="updateSkuValue" parameterType="com.fh.bean.po.SkuValueBean">
+        update t_skuvalue set name=#{name},nameCH=#{nameCH},skuKeyId=#{skuKeyId} where  id=#{id}
+
+    </update>
+
 </mapper>
