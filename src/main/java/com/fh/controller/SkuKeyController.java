@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/skukey")
+@CrossOrigin
 public class SkuKeyController {
 
 

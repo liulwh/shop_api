@@ -1,5 +1,7 @@
 package com.fh.controller;
 
+import com.fh.Utils.OssFileUtils;
+import com.fh.common.ReturnData;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * @create 2020-11-03 19:33
@@ -47,5 +50,17 @@ public class UploadFileController {
         resultMap.put("code",0);
         resultMap.put("url","http://192.168.1.135:8080/commons/photo/"+newFileName);
         return resultMap;
+    }
+
+    @RequestMapping("/uploadFile")
+    @ResponseBody
+    public ReturnData uploadFile(MultipartFile file) throws IOException {
+        //处理新名称
+        String originalFilename = file.getOriginalFilename();
+        //防止中文引起的错误
+        String newName= UUID.randomUUID().toString()+originalFilename.substring(originalFilename.lastIndexOf("."));
+        //存储路径
+        newName="imgs/"+newName;
+        return ReturnData.successs(OssFileUtils.uploadFile(file.getInputStream(),newName));
     }
 }
