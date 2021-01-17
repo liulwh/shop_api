@@ -42,4 +42,11 @@ public class SkuValueController {
         return  ReturnData.successs("");
     }
 
+    @DeleteMapping("/deleteSkuValue")
+    public ReturnData deleteSkuValue(Integer id){
+        skuValueService.deleteSkuValue(id);
+        return  ReturnData.successs("");
+    }
+
+
 }

@@ -12,4 +12,6 @@ public interface SkuValueService {
     SkuValueBean querySkuValueById(Integer id);
 
     void updateSkuValue(SkuValueBean skuValueBean);
+
+    void deleteSkuValue(Integer id);
 }

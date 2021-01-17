@@ -14,4 +14,6 @@ public interface SkuValueMapper {
     SkuValueBean querySkuValueById(Integer id);
 
     void updateSkuValue(SkuValueBean skuValueBean);
+
+    void deleteSkuValue(Integer id);
 }

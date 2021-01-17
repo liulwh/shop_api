@@ -41,4 +41,9 @@ public class SkuValueServiceImpl implements SkuValueService {
     public void updateSkuValue(SkuValueBean skuValueBean) {
         skuValueMapper.updateSkuValue(skuValueBean);
     }
+
+    @Override
+    public void deleteSkuValue(Integer id) {
+        skuValueMapper.deleteSkuValue(id);
+    }
 }
