@@ -1,6 +1,7 @@
 package com.fh.mapper;
 
 import com.fh.bean.po.SkuValueBean;
+import com.fh.bean.vo.SkuValVo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -16,4 +17,8 @@ public interface SkuValueMapper {
     void updateSkuValue(SkuValueBean skuValueBean);
 
     void deleteSkuValue(Integer id);
+
+    Integer queryCount(SkuValVo skuValVo);
+
+    List<SkuValueBean> queryPageData(SkuValVo skuValVo);
 }

@@ -1,11 +1,12 @@
 package com.fh.service;
 
 import com.fh.bean.po.SkuValueBean;
+import com.fh.bean.vo.SkuValVo;
 
 import java.util.Map;
 
 public interface SkuValueService {
-    Map queryData(Integer skuId);
+    //Map queryData(Integer skuId);
 
     void addSkuValue(SkuValueBean skuValueBean);
 
@@ -14,4 +15,6 @@ public interface SkuValueService {
     void updateSkuValue(SkuValueBean skuValueBean);
 
     void deleteSkuValue(Integer id);
+
+    Map queryData(SkuValVo skuValVo);
 }

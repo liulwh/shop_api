@@ -1,6 +1,7 @@
 package com.fh.controller;
 
 import com.fh.bean.po.SkuValueBean;
+import com.fh.bean.vo.SkuValVo;
 import com.fh.common.ReturnData;
 import com.fh.service.SkuValueService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,8 @@ public class SkuValueController {
 
 
     @GetMapping("/queryData")
-    public ReturnData  queryData(Integer skuId){
-        Map map=skuValueService.queryData(skuId);
+    public ReturnData  queryData(SkuValVo SkuValVo){
+        Map map=skuValueService.queryData(SkuValVo);
         return  ReturnData.successs(map);
     }
 

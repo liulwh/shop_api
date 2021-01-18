@@ -5,6 +5,20 @@
 
 <mapper namespace="com.fh.mapper.SkuValueMapper">
 
+
+    <select id="queryCount" parameterType="com.fh.bean.vo.SkuValVo" resultType="java.lang.Integer">
+
+        select count(id) from t_skuvalue  where  isDel=0  and skuKeyId=#{skuKeyId}
+    </select>
+
+    <select id="queryPageData" parameterType="com.fh.bean.vo.SkuValVo" resultType="com.fh.bean.po.SkuValueBean">
+         SELECT DISTINCT skv.id,skv.name,skv.nameCH,skv.skuKeyId  FROM t_skuvalue skv LEFT JOIN t_skukey skk on skv.skukeyId=#{skuKeyId}
+         where skv.isDel=0 and  skv.skuKeyId=#{skuKeyId}
+        limit  ${size*(start-1)},#{size}
+    </select>
+
+
+
      <select id="queryData" parameterType="java.lang.Integer" resultType="com.fh.bean.po.SkuValueBean">
 
          SELECT DISTINCT skv.id,skv.name,skv.nameCH,skv.skuKeyId  FROM t_skuvalue skv LEFT JOIN t_skukey skk on skv.skukeyId=#{typeid}

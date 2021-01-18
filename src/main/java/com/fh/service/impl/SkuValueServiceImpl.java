@@ -1,6 +1,7 @@
 package com.fh.service.impl;
 
 import com.fh.bean.po.SkuValueBean;
+import com.fh.bean.vo.SkuValVo;
 import com.fh.mapper.SkuValueMapper;
 import com.fh.service.SkuValueService;
 import org.springframework.stereotype.Service;
@@ -18,10 +19,11 @@ public class SkuValueServiceImpl implements SkuValueService {
 
 
     @Override
-    public Map queryData(Integer skuId) {
+    public Map queryData(SkuValVo SkuValVo) {
         Map map=new HashMap();
-
-      List<SkuValueBean>  skuValueBeans= skuValueMapper.queryData(skuId);
+       Integer count= skuValueMapper.queryCount(SkuValVo);
+        map.put("count",count);
+      List<SkuValueBean>  skuValueBeans= skuValueMapper.queryPageData(SkuValVo);
         map.put("list",skuValueBeans);
         return map;
     }
