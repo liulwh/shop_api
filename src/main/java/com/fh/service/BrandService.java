@@ -17,4 +17,6 @@ public interface BrandService {
     BrandBean queryBrandById(Integer id);
 
     void delBrand(Integer id);
+
+    Map queryBrandData();
 }

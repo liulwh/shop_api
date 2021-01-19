@@ -45,4 +45,10 @@
     </update>
 
 
+    <select id="querySkukeyByTypeId" parameterType="java.lang.Integer" resultType="com.fh.bean.po.SkuKeyBean">
+
+          select  *from  t_skukey where isDel=0 and typeId=#{typeId}
+    </select>
+
+
 </mapper>

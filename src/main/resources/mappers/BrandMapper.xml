@@ -49,4 +49,10 @@
 
     </update>
 
+
+    <select id="queryBrandData" resultType="com.fh.bean.po.BrandBean">
+
+        select * from t_brand where isdel=0
+    </select>
+
 </mapper>

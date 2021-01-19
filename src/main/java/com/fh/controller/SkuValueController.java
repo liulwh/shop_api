@@ -108,4 +108,25 @@ public class SkuValueController {
     }
 
 
+    /**
+     * 根据 keyId 查询 Value
+     *
+     * 路径   http://192.168.135:8080/api/SkuValue/querySkuValueBySkuKeyId
+     *
+     * 请求方式 get
+     *
+     * 参数 Integer   skuKeyId 必须
+     *
+     * 返回值  code："200",message:"操作成功",data:[{},{}]
+     *
+     * @param skuKeyId
+     * @return
+     */
+    @GetMapping("/querySkuValueBySkuKeyId")
+    public  ReturnData querySkuValueBySkuKeyId(Integer skuKeyId){
+
+       Map map= skuValueService.querySkuValueBySkuKeyId(skuKeyId);
+        return  ReturnData.successs(map);
+    }
+
 }

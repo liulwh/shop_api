@@ -119,4 +119,23 @@ public class BrandController {
         return  ReturnData.successs(null);
     }
 
+
+    /**
+     *  品牌查询
+     *
+     *  请求路径  http://192.168.135:8080/api/brand/queryBrandData
+     *
+     *  请求方式  get
+     *
+     *  参数  没有
+     *
+     *  返回值  code："200",message:"操作成功",data:[{},{}]
+     *
+     * @return
+     */
+    @GetMapping("/queryBrandData")
+    public  ReturnData queryBrandData(){
+       Map map= brandService.queryBrandData();
+        return  ReturnData.successs(map);
+    }
 }

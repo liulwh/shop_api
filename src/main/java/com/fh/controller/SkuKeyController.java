@@ -113,5 +113,25 @@ public class SkuKeyController {
     }
 
 
+    /**
+     *
+     * 根据 typeId 查询 skukey
+     *
+     * 路径  http://192.168.135:8080/api/skukey/querySkukeyByTypeId
+     *
+     * 请求方式 get
+     *
+     * 参数 typeId 必须
+     *
+     * 返回值  code："200",message:"操作成功",data:[{},{}]
+     *
+     * @param typeId
+     * @return
+     */
+    @GetMapping("/querySkukeyByTypeId")
+    public ReturnData querySkukeyByTypeId(Integer typeId){
+       Map map= skuKeyService.querySkukeyByTypeId(typeId);
+        return  ReturnData.successs(map);
+    }
 
 }

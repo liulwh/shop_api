@@ -46,4 +46,12 @@ public class SkuKeyServiceImpl implements SkuKeyService {
     public void delSkuKey(Integer id) {
         skuKeyMapper.delSkuKey(id);
     }
+
+    @Override
+    public Map querySkukeyByTypeId(Integer typeId) {
+        Map map= new HashMap();
+       List<SkuKeyBean> skuKeyBeans =skuKeyMapper.querySkukeyByTypeId(typeId);
+         map.put("data",skuKeyBeans);
+       return map;
+    }
 }

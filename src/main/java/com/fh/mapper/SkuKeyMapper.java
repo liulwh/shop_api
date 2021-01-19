@@ -21,4 +21,6 @@ public interface SkuKeyMapper {
     void updateSkuKey(SkuKeyBean keyBean);
 
     void delSkuKey(Integer id);
+
+    List<SkuKeyBean> querySkukeyByTypeId(Integer typeId);
 }

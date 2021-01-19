@@ -21,4 +21,6 @@ public interface SkuValueMapper {
     Integer queryCount(SkuValVo skuValVo);
 
     List<SkuValueBean> queryPageData(SkuValVo skuValVo);
+
+    List<SkuValueBean> querySkuValueBySkuKeyId(Integer skuKeyId);
 }

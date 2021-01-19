@@ -29,6 +29,15 @@ public class SkuValueServiceImpl implements SkuValueService {
     }
 
     @Override
+    public Map querySkuValueBySkuKeyId(Integer skuKeyId) {
+        Map map=new HashMap();
+
+       List<SkuValueBean> skuValueBeans= skuValueMapper.querySkuValueBySkuKeyId(skuKeyId);
+       map.put("data",skuValueBeans);
+        return map;
+    }
+
+    @Override
     public void addSkuValue(SkuValueBean skuValueBean) {
         skuValueMapper.addSkuValue(skuValueBean);
     }

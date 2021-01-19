@@ -48,4 +48,14 @@ public class BrandServiceImpl implements BrandService {
     public void delBrand(Integer id) {
         brandMapper.delBrand(id);
     }
+
+    @Override
+    public Map queryBrandData() {
+        Map map=new HashMap();
+
+     List<BrandBean> brandBeans=   brandMapper.queryBrandData();
+        map.put("data",brandBeans);
+
+        return map;
+    }
 }

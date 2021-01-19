@@ -20,4 +20,6 @@ public interface BrandMapper {
     void updateBrand(BrandBean brandBean);
 
     void delBrand(Integer id);
+
+    List<BrandBean> queryBrandData();
 }

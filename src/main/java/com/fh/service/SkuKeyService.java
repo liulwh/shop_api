@@ -13,4 +13,6 @@ public interface SkuKeyService {
     void updateSkuKey(SkuKeyBean keyBean);
 
     void delSkuKey(Integer id);
+
+    Map querySkukeyByTypeId(Integer typeId);
 }

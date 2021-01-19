@@ -46,4 +46,10 @@
         update t_skuvalue set  isDel=1 where id=#{id}
     </delete>
 
+
+    <select id="querySkuValueBySkuKeyId"  parameterType="java.lang.Integer" resultType="com.fh.bean.po.SkuValueBean">
+
+        select * from  t_skuvalue where isDel=0 and skuKeyId =#{skuKeyId}
+
+    </select>
 </mapper>

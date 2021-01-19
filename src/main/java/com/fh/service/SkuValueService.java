@@ -17,4 +17,6 @@ public interface SkuValueService {
     void deleteSkuValue(Integer id);
 
     Map queryData(SkuValVo skuValVo);
+
+    Map querySkuValueBySkuKeyId(Integer skuKeyId);
 }
