@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.mapper.ShopMapper">
+
+
+  <insert id="addShop" parameterType="com.fh.bean.po.ShopBean">
+      insert into t_shop
+(name,title,brandId,productdecs,price,stocks,sortNum,
+   createDate,updateDate,author,isDel,imgPath,typeId)
+value
+(#{name},#{title},#{brandId},#{productdecs},#{price},#{stocks},#{sortNum},
+ SYSDATE(),SYSDATE(),'lwh',0,#{imgPath},#{typeId})
+
+
+
+
+  </insert>
+
+</mapper>

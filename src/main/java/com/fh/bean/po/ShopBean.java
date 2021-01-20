@@ -29,6 +29,25 @@ public class ShopBean {
 
     private Integer isDel;//是否显示 是否删除 0显示 1不显示
 
+    private String imgPath; // 图片
+
+    private Integer typeId; // 分类Id
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
 
     public Integer getId() {
         return id;
