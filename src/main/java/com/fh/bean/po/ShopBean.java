@@ -1,5 +1,8 @@
 package com.fh.bean.po;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class ShopBean {
@@ -21,8 +24,12 @@ public class ShopBean {
 
     private  Integer sortNum; //排序
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date  createDate;//创建时间
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private  Date  updateDate;//修改时间
 
     private String author;// 操作人

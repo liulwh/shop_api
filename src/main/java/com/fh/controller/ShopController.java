@@ -7,6 +7,7 @@ import com.fh.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -125,8 +126,11 @@ public class ShopController {
     @GetMapping("/queryShopById")
     public ReturnData queryShopById(Integer id){
 
+        Map map=new HashMap();
+
      ShopBean shopBean=  shopService.queryShopById(id);
-        return  ReturnData.successs(shopBean);
+        map.put("data",shopBean);
+        return  ReturnData.successs(map);
     }
 
 
