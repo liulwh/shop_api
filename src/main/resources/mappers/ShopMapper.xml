@@ -33,4 +33,9 @@ value
           where  id=#{id}
     </update>
 
+    <delete id="deleteShop" parameterType="java.lang.Integer">
+       update  t_shop set  isDel=1,updateDate=SYSDATE() where id=#{id}
+
+    </delete>
+
 </mapper>

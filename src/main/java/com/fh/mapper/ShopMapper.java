@@ -16,4 +16,6 @@ public interface ShopMapper {
     List<ShopBean> queryShopData(ShopVo shopVo);
 
     void updateShop(ShopBean shopBean);
+
+    void deleteShop(Integer id);
 }

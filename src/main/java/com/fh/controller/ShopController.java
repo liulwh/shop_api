@@ -87,5 +87,24 @@ public class ShopController {
         return  ReturnData.successs(null);
     }
 
+    /**
+     * 删除商品
+     *
+     * 路径   http://localhost:8080/api/shop/deleteShop
+     *
+     * 请求方式 delete
+     *
+     * 参数 Integer id 必传
+     *
+     * 返回值  code:"200",message:"操作成功",data:" 空  "
+     *
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/deleteShop")
+    public ReturnData deleteShop(Integer id){
+        shopService.deleteShop(id);
+        return  ReturnData.successs(null);
+    }
 
 }

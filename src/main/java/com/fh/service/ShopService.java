@@ -11,4 +11,6 @@ public interface ShopService {
     Map queryShop(ShopVo shopVo);
 
     void updateShop(ShopBean shopBean);
+
+    void deleteShop(Integer id);
 }

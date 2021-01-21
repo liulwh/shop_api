@@ -75,4 +75,9 @@ public class ShopServiceImpl implements ShopService {
         shopMapper.updateShop(shopBean);
     }
 
+    @Override
+    public void deleteShop(Integer id) {
+        shopMapper.deleteShop(id);
+    }
+
 }
