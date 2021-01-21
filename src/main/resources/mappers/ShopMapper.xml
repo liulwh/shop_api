@@ -6,17 +6,22 @@
 <mapper namespace="com.fh.mapper.ShopMapper">
 
 
-  <insert id="addShop" parameterType="com.fh.bean.po.ShopBean">
+  <insert id="addShop" parameterType="com.fh.bean.po.ShopBean" useGeneratedKeys="true" keyProperty="id">
       insert into t_shop
 (name,title,brandId,productdecs,price,stocks,sortNum,
    createDate,updateDate,author,isDel,imgPath,typeId)
 value
 (#{name},#{title},#{brandId},#{productdecs},#{price},#{stocks},#{sortNum},
  SYSDATE(),SYSDATE(),'lwh',0,#{imgPath},#{typeId})
-
-
-
-
   </insert>
+
+    <select id="queryCount" parameterType="com.fh.bean.vo.ShopVo" resultType="java.lang.Integer">
+        select count(id) from t_shop  where  isDel=0
+    </select>
+
+    <select id="queryShopData" parameterType="com.fh.bean.vo.ShopVo" resultType="com.fh.bean.po.ShopBean">
+        select * from  t_shop  where   isDel=0
+           limit  ${size*(start-1)},#{size}
+    </select>
 
 </mapper>
