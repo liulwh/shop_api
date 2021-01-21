@@ -64,5 +64,28 @@ public class ShopController {
     }
 
 
+    /**
+     *
+     * 修改商品
+     *
+     * 路径   http://localhost:8080/api/shop/updateShop
+     *
+     * 请求方式 post
+     *
+     * 请求参数  Integer id 必传
+     *
+     * 返回值  code:"200",message:"操作成功",data:" 空  "
+     *
+     * @param shopBean
+     * @return
+     */
+    @PostMapping("/updateShop")
+    public  ReturnData updateShop(ShopBean shopBean){
+
+        shopService.updateShop(shopBean);
+
+        return  ReturnData.successs(null);
+    }
+
 
 }

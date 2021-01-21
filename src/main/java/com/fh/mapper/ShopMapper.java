@@ -14,4 +14,6 @@ public interface ShopMapper {
     Integer queryCount(ShopVo shopVo);
 
     List<ShopBean> queryShopData(ShopVo shopVo);
+
+    void updateShop(ShopBean shopBean);
 }

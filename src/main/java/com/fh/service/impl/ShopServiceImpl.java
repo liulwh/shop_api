@@ -69,4 +69,10 @@ public class ShopServiceImpl implements ShopService {
         map.put("data",shopBeans);
         return map;
     }
+
+    @Override
+    public void updateShop(ShopBean shopBean) {
+        shopMapper.updateShop(shopBean);
+    }
+
 }

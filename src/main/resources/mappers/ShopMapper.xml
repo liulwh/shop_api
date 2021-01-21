@@ -24,4 +24,13 @@ value
            limit  ${size*(start-1)},#{size}
     </select>
 
+
+    <update id="updateShop" parameterType="com.fh.bean.po.ShopBean">
+
+        update  t_shop set name=#{name},title=#{title},brandId=#{brandId},productdecs=#{productdecs},
+        price=#{price},stocks=#{stocks},sortNum=#{sortNum},imgPath=#{imgPath},
+        typeId=#{typeId},updateDate=SYSDATE()
+          where  id=#{id}
+    </update>
+
 </mapper>
