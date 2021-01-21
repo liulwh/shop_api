@@ -46,4 +46,9 @@ value
 
     </delete>
 
+    <select id="queryShopById" parameterType="java.lang.Integer" resultType="com.fh.bean.po.ShopBean">
+
+        select * from t_shop  where isDel=0 and id=#{id}
+    </select>
+
 </mapper>

@@ -107,4 +107,27 @@ public class ShopController {
         return  ReturnData.successs(null);
     }
 
+
+    /**
+     * 回显
+     *
+     * 路径   http://localhost:8080/api/shop/queryShopById
+     *
+     * 请求方式 get
+     *
+     * 参数 Integer id 必传
+     *
+     * 返回值  code:"200",message:"操作成功",data:" {id：""} "
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/queryShopById")
+    public ReturnData queryShopById(Integer id){
+
+     ShopBean shopBean=  shopService.queryShopById(id);
+        return  ReturnData.successs(shopBean);
+    }
+
+
 }

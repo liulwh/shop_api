@@ -21,4 +21,6 @@ public interface ShopMapper {
     void deleteShop(Integer id);
 
     List<ShopShow> queryShopShow(ShopVo shopVo);
+
+    ShopBean queryShopById(Integer id);
 }

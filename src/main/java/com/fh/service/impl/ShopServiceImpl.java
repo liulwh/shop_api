@@ -82,4 +82,10 @@ public class ShopServiceImpl implements ShopService {
         shopMapper.deleteShop(id);
     }
 
+    @Override
+    public ShopBean queryShopById(Integer id) {
+
+        return   shopMapper.queryShopById(id);
+    }
+
 }

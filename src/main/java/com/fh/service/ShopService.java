@@ -13,4 +13,6 @@ public interface ShopService {
     void updateShop(ShopBean shopBean);
 
     void deleteShop(Integer id);
+
+    ShopBean queryShopById(Integer id);
 }
