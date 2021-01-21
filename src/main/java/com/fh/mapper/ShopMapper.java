@@ -1,6 +1,7 @@
 package com.fh.mapper;
 
 import com.fh.bean.po.ShopBean;
+import com.fh.bean.vo.ShopShow;
 import com.fh.bean.vo.ShopVo;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -18,4 +19,6 @@ public interface ShopMapper {
     void updateShop(ShopBean shopBean);
 
     void deleteShop(Integer id);
+
+    List<ShopShow> queryShopShow(ShopVo shopVo);
 }

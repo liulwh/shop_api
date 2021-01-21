@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.fh.bean.po.ShopBean;
 import com.fh.bean.po.ShopKYBean;
+import com.fh.bean.vo.ShopShow;
 import com.fh.bean.vo.ShopVo;
 import com.fh.mapper.ShopAttrMapper;
 import com.fh.mapper.ShopMapper;
@@ -65,8 +66,9 @@ public class ShopServiceImpl implements ShopService {
         Map map=new HashMap();
      Integer count= shopMapper.queryCount(shopVo);
      map.put("count",count);
-       List<ShopBean> shopBeans=shopMapper.queryShopData(shopVo);
-        map.put("data",shopBeans);
+     //  List<ShopBean> shopBeans=shopMapper.queryShopData(shopVo);
+        List<ShopShow>  shopShows=shopMapper.queryShopShow(shopVo);
+        map.put("data",shopShows);
         return map;
     }
 
