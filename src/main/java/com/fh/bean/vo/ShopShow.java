@@ -16,10 +16,20 @@ public class ShopShow {
 
     private String imgPath; // 图片
 
+    private  Integer typeId;// 分类 Id
+
     private String typeName; // 分类名字
 
     private String brandName; // 品牌名字
 
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
 
     public Integer getId() {
         return id;

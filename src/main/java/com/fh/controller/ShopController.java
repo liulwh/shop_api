@@ -134,4 +134,12 @@ public class ShopController {
     }
 
 
+    @GetMapping("/queryProductAttrDataByPid")
+    public ReturnData  queryProductAttrDataByPid(Integer shopId){
+
+
+        return  ReturnData.successs(null);
+    }
+
+
 }

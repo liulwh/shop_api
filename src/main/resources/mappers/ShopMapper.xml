@@ -26,8 +26,8 @@ value
 
 
     <select id="queryShopShow" parameterType="com.fh.bean.vo.ShopVo" resultType="com.fh.bean.vo.ShopShow">
-   SELECT  ts.id,ts.`name`,ts.title,ts.productdecs,ts.price,ts.stocks,ts.imgPath,tt.`name` as typeName,tb.`name` as brandName FROM t_shop ts LEFT JOIN t_brand tb ON ts.brandId=tb.id LEFT JOIN t_type tt ON ts.typeId=tt.id
-     WHERE ts.isDel=0
+   SELECT  ts.id,ts.`name`,ts.typeId,ts.title,ts.productdecs,ts.price,ts.stocks,ts.imgPath,tt.`name` as typeName,tb.`name` as brandName FROM t_shop ts LEFT JOIN t_brand tb ON ts.brandId=tb.id LEFT JOIN t_type tt ON ts.typeId=tt.id
+     WHERE ts.isDel=0  ORDER BY  ts.id DESC
      limit  ${size*(start-1)},#{size}
     </select>
 
