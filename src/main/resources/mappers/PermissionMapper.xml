@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.mapper.PermissionMapper">
+
+  <select id="getData" resultType="com.fh.bean.po.PermissionBean">
+
+      select * from  t_permission where isDel=0
+  </select>
+
+    <insert id="add" parameterType="com.fh.bean.po.PermissionBean">
+
+        insert  into t_permission (pid,name,url,type,isDel,createDate,author)
+        value (#{pid},#{name},#{url},#{type},0,SYSDATE(),'lwh')
+
+    </insert>
+
+    <update id="update" parameterType="com.fh.bean.po.PermissionBean">
+
+        update t_permission set pid=#{pid},name=#{name},url=#{url},type=#{type},isDel=0
+        where id=#{id}
+    </update>
+
+</mapper>
